@@ -144,10 +144,10 @@
 
 
 ![image](https://user-images.githubusercontent.com/40026846/115135068-7d99ee80-a050-11eb-8da7-89f1127f037e.png)
-이렇게 촬영된 영상이 (파란색: 얼굴 가리려고 칠한것임)
-
-아래와 같이 추출됨
 ![image](https://user-images.githubusercontent.com/40026846/115135070-82f73900-a050-11eb-9058-fa7f1ac23abb.png)
+이렇게 촬영된 영상이 (파란색: 얼굴 가리려고 칠한것임) : 왼쪽 사진
+아래와 같이 추출됨 : 오른쪽 사진
+
 
 
 #### 눈 인식 정보 획득 알고리즘 수행 플로우 (위 코드를 정리하면 다음과 같다)
