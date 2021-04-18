@@ -49,17 +49,16 @@
 사용 라이브러리 : dlib http://dlib.net/
 
 
-### STEP 1) dlib라이브러리를 사용하여 얼굴 검출기와 얼굴 표식 탐지기를 초기화
-### STEP 2) 좌/우 눈과 눈썹의 landmark를 구한 후 눈인식을 위한특징을 추출
-### STEP 3) 좌/우 눈의 indexing 값 가져오기 (array slice index values)
-### STEP 4) mp4 파일 가져오기
-### STEP 5) 비디오 스트림 반복 (비디오에 프레임이 없으면 루프 탈출!)
-### STEP 5-1)  이미지 전처리: 스트림에서 프레임을 읽은 다음, 크기를 조정하고, 회색 음영으로 변환.
-### STEP 5-2)  얼굴검출기인 detector를 통해 그레이 프레임에서 을 탐지
-### STEP 5-3) 얼굴영역(ROI)의 갯수만큼 for문 돈다: 인식에서는 얼굴은 한개니까 한바퀴 돈다 (두명의 얼굴이 있으면 두바퀴 돈다)
-           <눈 영역 추출 핵심!!>
+#### STEP 1) dlib라이브러리를 사용하여 얼굴 검출기와 얼굴 표식 탐지기를 초기화
+#### STEP 2) 좌/우 눈과 눈썹의 landmark를 구한 후 눈인식을 위한특징을 추출
+#### STEP 3) 좌/우 눈의 indexing 값 가져오기 (array slice index values)
+#### STEP 4) mp4 파일 가져오기
+#### STEP 5) 비디오 스트림 반복 (비디오에 프레임이 없으면 루프 탈출!)
+#### STEP 5-1)  이미지 전처리: 스트림에서 프레임을 읽은 다음, 크기를 조정하고, 회색 음영으로 변환.
+#### STEP 5-2)  얼굴검출기인 detector를 통해 그레이 프레임에서 을 탐지
+#### STEP 5-3) 얼굴영역(ROI)의 갯수만큼 for문 돈다: 인식에서는 얼굴은 한개니까 한바퀴 돈다 (두명의 얼굴이 있으면 두바퀴 돈다)
 
-  for rect in rects:
+    for rect in rects:
             # 1) pridictor
             shape = predictor(gray, rect)               # 얼굴영역(rect)의 facial landmarks (shape-> (x,y)의 list)를 정하고
             shape = face_utils.shape_to_np(shape)       # 그걸 NumPy array(ndarray)로 변환
