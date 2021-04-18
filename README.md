@@ -37,5 +37,6 @@
     print(mean, eigenVectors)
 
 ## STEP 6) Reshape Eigenvectors to obtain 'EigenFaces'
-''python    averageFace = mean.reshape(sz)
+'''python    
+averageFace = mean.reshape(sz)
 '''
