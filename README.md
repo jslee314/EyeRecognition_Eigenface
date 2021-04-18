@@ -135,3 +135,16 @@
         key = cv2.waitKey(1) & 0xFF
 
 
+
+
+
+
+
+
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/40026846/115135006-1bd98480-a050-11eb-97bd-2710bdea83eb.png)
+
